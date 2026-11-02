@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDF Notes Website</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <div class="logo">
+        <img src="images/logo.jpg" alt="Logo" />
+        <h1>PDF Notes</h1>
+      </div>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="menu" id="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <button class="user-icon" onclick="toggleAuth()">👤</button>
+    </nav>
+  </header>
+
+  <div id="auth-popup">
+    <h3>🔐 Login</h3>
+    <div class="input-group">
+      <span class="icon">👤</span>
+      <input type="text" placeholder="Username" id="login-username">
+    </div>
+    <div class="input-group">
+      <span class="icon">🔒</span>
+      <input type="password" placeholder="Password" id="login-password">
+    </div>
+    <button class="button_1" onclick="login()">Login</button>
+    <hr>
+    <h3>📝 Register</h3>
+    <div class="input-group">
+      <span class="icon">📧</span>
+      <input type="email" placeholder="Email" id="register-email">
+    </div>
+    <div class="input-group">
+      <span class="icon">👤</span>
+      <input type="text" placeholder="Username" id="register-username">
+    </div>
+    <div class="input-group">
+      <span class="icon">🔒</span>
+      <input type="password" placeholder="Password" id="register-password">
+    </div>
+    <button class="button_1" onclick="register()">Register</button>
+  </div>
+
+  <section id="showcase">
+    <div class="container">
+      <h1>Your PDF Notes Here</h1>
+      <p>Upload, manage, and view your PDF notes easily.</p>
+    </div>
+  </section>
+
+  <section id="search-section">
+    <form>
+      <input type="text" placeholder="Search PDF notes...">
+      <button type="submit" class="button_1">Search</button>
+    </form>
+  </section>
+
+  <section class="pdf-grid container">
+    <div class="pdf-box"><h3>Discrete Structures Notes</h3><a href="#" target="_blank">Open PDF</a></div>
+    <div class="pdf-box"><h3>Python Programming Notes</h3><a href="#" target="_blank">Open PDF</a></div>
+    <div class="pdf-box"><h3>Operating System Notes</h3><a href="#" target="_blank">Open PDF</a></div>
+    <div class="pdf-box"><h3>DS and Algorithm Notes</h3><a href="#" target="_blank">Open PDF</a></div>
+    <div class="pdf-box"><h3>D.E.&M Science</h3><a href="#" target="_blank">Open PDF</a></div>
+    <div class="pdf-box"><h3>P.OF.M Notes</h3><a href="#" target="_blank">Open PDF</a></div>
+    <div class="pdf-box"><h3>All Notes</h3><a href="#" target="_blank">Open PDF</a></div>
+  </section>
+
+  <section id="pdf-viewer">
+    <div class="container">
+      <h2>PDF Viewer</h2>
+      <input type="file" id="pdf-upload" accept=".pdf" />
+      <iframe id="pdf-frame" src="" width="100%" height="500px"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column footer-logo">
+        <img src="images/logo.jpg" alt="Logo" style="height: 50px; margin-bottom: 10px;">
+        <h2>PDF NOTES</h2>
+        <p>Unlock learning with online tests, courses, syllabus, and PDF notes.</p>
+        <p><strong>Hansraj Kumar (Founder)</strong></p>
+        <p><strong>Phone:</strong> 9473245306</p>
+        <p><strong>Email:</strong> hansrajmano@gmail.com</p>
+        <div class="social-icons">
+          <button>🔵</button>
+          <button>🔴</button>
+          <button>🔷</button>
+          <button>🟦</button>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Our Courses</h3>
+        <ul>
+          <li><a href="#">IT Tools</a></li>
+          <li><a href="#">Web Designing</a></li>
+          <li><a href="#">Python Programming</a></li>
+          <li><a href="#">Internet of Things</a></li>
+          <li><a href="#">O Level Info</a></li>
+          <li><a href="#">A Level Info</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Web Resources</h3>
+        <ul>
+          <li><a href="#">Primegyan.com</a></li>
+          <li><a href="#">Olevelonlinetest.com</a></li>
+          <li><a href="#">CCCwalebhaiya.com</a></li>
+          <li><a href="#">NewideasYT</a></li>
+          <li><a href="#">CCCwalebhaiya</a></li>
+          <li><a href="#">Examjila.in</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p>© 2025 PDF Notes. Built by Hansraj Kumar and Team.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
